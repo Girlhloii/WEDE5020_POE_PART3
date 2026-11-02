@@ -1,0 +1,433 @@
+/* =========================
+   Global Styles
+   ========================= */
+
+body {
+    font-family: Georgia, serif;
+    background-color: #F5F5DC;
+    color: #2C2C2C;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+header {
+    background-color: #2C2C2C;
+    color: #FFFFF0;
+    border-bottom: 4px solid #C5A059;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.header-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C2C2C;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    border: none;
+}
+
+.title h1 {
+    margin: 0;
+    color: #FFFFF0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 42px;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #C5A059;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-bar a.active {
+  color: #C5A059;
+  border-bottom: 2px solid #C5A059;
+}
+.nav-bar a {
+  position: relative;
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #C5A059;
+  transition: width 0.3s ease;
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+}
+
+
+nav a {
+    color: #2C2C2C;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #C5A059;
+}
+
+.nav-bar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;              /* horizontal layout */
+  justify-content: center;    /* center the links */
+  gap: 30px;                  /* spacing between links */
+  background-color: #2C2C2C;  /* DARK background */
+  border-bottom: 4px solid #C5A059;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #FFFFF0;             /* light text */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #C5A059;             /* gold hover effect */
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   Home Page
+   ========================= */
+
+.home-main {
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #FFFFF0;
+    box-shadow: 8px 8px 0px #C5A059;
+}
+
+.home-section {
+    text-align: center;
+
+}
+
+.home-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.home-image img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+}
+
+.home-section ul {
+    list-style-position: inside;
+    padding: 0;
+}
+
+.home-section li {
+    margin: 8px 0;
+}
+
+.home-section a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #2C2C2C;
+    color: #FFFFF0;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home-section a,
+.contact-main input[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+.home-section a:hover {
+    background-color: #C5A059;
+    color: #2C2C2C;
+}
+
+.home-section a:hover,
+.contact-main input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+.gold-text {
+    color: #D4AF37;
+    font-style: italic;
+}
+
+/* =========================
+   About Page
+   ========================= */
+
+.about-main {
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #FFFFF0;
+    box-shadow: 8px 8px 0px #C5A059;
+}
+
+.about-main h2 {
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 10px;
+}
+
+.video-box {
+    border: 5px solid #2C2C2C;
+    background-color: #000;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* =========================
+   Services Page
+   ========================= */
+
+.service-main {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #FFFFF0;
+    box-shadow: 8px 8px 0px #C5A059;
+    border: 1px solid #D4AF37;
+}
+
+/* =========================
+   Gallery Page
+   ========================= */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.product {
+    text-align: center;
+    width: 250px;
+    border: 1px solid #D4AF37;
+    padding: 20px;
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    margin-top: 10px;
+}
+.price {
+  font-weight: bold;
+  color: #b22222; /* deep red */
+  font-size: 1.1em;
+  margin-top: 5px;
+    }
+
+/* =========================
+   Contact Page
+   ========================= */
+
+.contact-main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #FFFFF0;
+    box-shadow: 8px 8px 0px #D4AF37;
+    border: 1px solid #D4AF37;
+}
+
+.contact-main input,
+.contact-main textarea,
+.contact-main select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #D4AF37;
+    box-sizing: border-box;
+}
+
+.contact-main textarea {
+    resize: vertical;
+}
+
+.contact-main input[type="submit"] {
+    background-color: #2C2C2C;
+    color: #D4AF37;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-main input[type="submit"]:hover {
+    background-color: #D4AF37;
+    color: #2C2C2C;
+}
+.map-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.map-container iframe {
+  width: 100%;        /* responsive */
+  max-width: 600px;   /* limit size */
+  height: 400px;
+  border: 2px solid #C5A059;
+  border-radius: 8px;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    background-color: #2C2C2C;
+    color: #FFFFF0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* =========================
+   Galler and Lightbox Styles
+   ========================= */
+   .lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox-modal img {
+    max-width: 80%;
+    max-height: 80vh;
+    border: 4px solid #C5A059;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #FFFFF0;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   Mobile Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .header-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        position: static;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .home-main,
+    .about-main,
+    .service-main,
+    .contact-main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    .home-image img {
+        width: 100%;
+    }
+    
+}
+
+   

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://girlholii.github.io/WEDE2050_POE_PART1/sitemap.xml
